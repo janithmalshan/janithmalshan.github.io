@@ -29,7 +29,7 @@
     display: block;
     color: #435460;
     font-weight: 600;
-    font-family: $fontSecondary;
+    font-family: $fontPrimary;
     line-height: 0.82;
     letter-spacing: -3px;
 
@@ -43,6 +43,10 @@
       color: #25333f;
       font-weight: 700;
       padding-left: 3px;
+    }
+    @include sm {
+      font-size: 40px;
+      margin: 8px 0;
     }
   }
 

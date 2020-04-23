@@ -28,7 +28,7 @@
   display: block;
   color: #435460;
   font-weight: 600;
-  font-family: "Roboto Mono", monospace;
+  font-family: "Source Code Pro", monospace;
   line-height: 0.82;
   letter-spacing: -3px;
 }
@@ -41,6 +41,12 @@
   color: #25333f;
   font-weight: 700;
   padding-left: 3px;
+}
+@media (max-width: 576px) {
+  .section-me h3 {
+    font-size: 40px;
+    margin: 8px 0;
+  }
 }
 .section-me .next-arrow {
   font-size: 13px;
@@ -86,8 +92,25 @@
   justify-self: center;
   grid-area: sidebar;
 }
+@media (max-width: 768px) {
+  .section-about .img-profile {
+    width: 165px;
+    height: 165px;
+    align-self: center;
+  }
+}
 .section-about__main {
   grid-area: main;
+}
+@media (max-width: 768px) {
+  .section-about {
+    grid-template-columns: 1fr;
+    grid-template-areas: "header sidebar" "main main";
+  }
+}
+
+body {
+  background-color: #0a192f;
 }
 
 .main-wrapper {
@@ -99,6 +122,11 @@
 }
 .main-wrapper main {
   padding: 0 80px;
+}
+@media (max-width: 576px) {
+  .main-wrapper main {
+    padding: 0 38px;
+  }
 }
 .main-wrapper footer {
   display: none;

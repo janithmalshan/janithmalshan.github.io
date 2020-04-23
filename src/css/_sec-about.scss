@@ -24,9 +24,19 @@
     border-radius: 4px;
     justify-self: center;
     grid-area: sidebar;
+    @include md {
+      width: 165px;
+      height: 165px;
+      align-self: center;
+    }
   }
 
   &__main {
     grid-area: main;
+  }
+
+  @include md {
+    grid-template-columns: 1fr;
+    grid-template-areas: "header sidebar" "main main";
   }
 }

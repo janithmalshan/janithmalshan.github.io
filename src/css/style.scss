@@ -5,8 +5,32 @@ $colorSecondary: #687e8e;
 $colorAccent: #26d353;
 $colorBg: #0a192f;
 
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Small devices
+@mixin sm {
+  @media (max-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (max-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
 @import "sec-me";
 @import "sec-about";
+
+body {
+  background-color: $colorBg;
+}
 
 .main-wrapper {
   background-color: $colorBg;
@@ -18,6 +42,9 @@ $colorBg: #0a192f;
 
   main {
     padding: 0 80px;
+    @include sm {
+      padding: 0 38px;
+    }
   }
 
   footer {
