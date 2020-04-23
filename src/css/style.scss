@@ -1,0 +1,93 @@
+$fontPrimary: 'Source Code Pro', monospace;
+$fontSecondary: 'Roboto Mono', monospace;
+$colorPrimary: #cedfec;
+$colorSecondary: #687e8e;
+$colorAccent: #26d353;
+$colorBg: #0a192f;
+
+@import "sec-me";
+@import "sec-about";
+
+.main-wrapper {
+  background-color: $colorBg;
+  font-family: $fontPrimary;
+
+  header {
+    display: none;
+  }
+
+  main {
+    padding: 0 80px;
+  }
+
+  footer {
+    display: none;
+  }
+}
+
+.txt-title {
+  color: $colorPrimary;
+  font-family: $fontPrimary;
+  margin: 0;
+  padding: 0;
+
+  &--md {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+}
+
+.txt-desc {
+  color: $colorSecondary;
+  font-family: $fontPrimary;
+  margin: 0;
+  padding: 0;
+  letter-spacing: -0.05em;
+
+  &--md {
+    font-size: 17px;
+    font-weight: 400;
+    margin: 0 0 12px 0;
+  }
+
+  &--sm {
+    font-size: 12px;
+    font-weight: 400;
+    margin: 2px 0;
+    font-family: $fontSecondary;
+  }
+}
+
+.list {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 200px));
+  list-style: none;
+  padding: 0 15px 0 0;
+  color: $colorSecondary;
+
+  li::before {
+    content: "▹";
+    left: 0;
+    color: $colorAccent;
+    font-size: 15px;
+    line-height: 12px;
+    margin: 0 4px 0 0;
+  }
+}
+
+*::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+*::-webkit-scrollbar-track {
+  background: $colorBg;
+}
+
+/* Handle */
+*::-webkit-scrollbar-thumb {
+  background: $colorSecondary;
+  border-radius: 4px;
+}
