@@ -25,9 +25,10 @@
     justify-self: center;
     grid-area: sidebar;
     @include md {
-      width: 165px;
-      height: 165px;
+      width: 145px;
+      height: 145px;
       align-self: center;
+      margin: 20px 0;
     }
   }
 

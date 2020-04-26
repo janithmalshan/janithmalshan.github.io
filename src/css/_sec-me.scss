@@ -44,6 +44,9 @@
       font-weight: 700;
       padding-left: 3px;
     }
+    @include md {
+      font-size: 56px;
+    }
     @include sm {
       font-size: 40px;
       margin: 8px 0;

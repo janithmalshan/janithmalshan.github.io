@@ -27,6 +27,7 @@ $screen-md-min: 768px;
 
 @import "sec-me";
 @import "sec-about";
+@import "sec-work";
 
 body {
   background-color: $colorBg;
@@ -42,13 +43,20 @@ body {
 
   main {
     padding: 0 80px;
+    margin: auto;
+    max-width: 1080px;
     @include sm {
       padding: 0 38px;
     }
   }
 
   footer {
-    display: none;
+    display: block;
+    color: $colorSecondary;
+    text-align: center;
+    padding: 50px 0;
+    font-size: 12px;
+    opacity: 0.75;
   }
 }
 
@@ -57,11 +65,36 @@ body {
   font-family: $fontPrimary;
   margin: 0;
   padding: 0;
+  position: relative;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  white-space: nowrap;
 
   &--md {
     font-size: 32px;
     font-weight: 600;
     margin-bottom: 30px;
+    @include md {
+      font-size: 30px;
+    }
+  }
+
+  &--sm {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 50%;
+    background-color: rgb(45, 57, 82);
+    position: relative;
+    top: 4px;
+    margin-left: 20px;
   }
 }
 
@@ -76,6 +109,9 @@ body {
     font-size: 17px;
     font-weight: 400;
     margin: 0 0 12px 0;
+    @include md {
+      font-size: 16px;
+    }
   }
 
   &--sm {
@@ -102,6 +138,17 @@ body {
     line-height: 12px;
     margin: 0 4px 0 0;
   }
+}
+
+.show-more {
+  font-size: 14px;
+  border: none;
+  outline: none;
+  color: $colorAccent;
+  font-weight: 400;
+  padding: 15px;
+  background: transparent;
+  cursor: pointer;
 }
 
 *::-webkit-scrollbar {

@@ -1,0 +1,167 @@
+.section-work {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+  box-sizing: border-box;
+
+  * {
+    animation-name: slideUp;
+    -webkit-animation-name: slideUp;
+    animation-duration: 0.2s;
+    -webkit-animation-duration: 0.2s;
+    visibility: visible;
+  }
+
+  .showcase-wr {
+    margin-bottom: 40px;
+
+    .txt-title--sm {
+      text-align: right;
+    }
+
+    .txt-desc--sm {
+      text-align: right;
+      color: $colorAccent;
+    }
+
+    &__img {
+      float: left;
+      height: 260px;
+      background-color: rgba(53, 53, 53, 0.15);
+      border-radius: 4px 4px 0px 4px;
+      width: 58%;
+      overflow: hidden;
+      display: block;
+      filter: grayscale(50%) invert(80%) saturate(130%);
+      transition: all 0.25s cubic-bezier(0.65, 0.045, 0.35, 1) 0.1s;
+
+      &:hover {
+        filter: none;
+      }
+
+      img {
+        height: inherit;
+      }
+
+      @include md {
+        float: none;
+        width: 100%;
+        margin: 10px auto -100px;
+        border-bottom-left-radius: 0;
+      }
+    }
+
+    &__txt {
+      float: right;
+      width: 48%;
+      margin-left: -6%;
+      text-align: right;
+      position: relative;
+      z-index: 1;
+
+      &--top {
+        background-color: #092a3e;
+        font-size: 16px;
+        font-family: $fontPrimary;
+        color: $colorSecondary;
+        font-weight: 400;
+        padding: 18px 18px 20px 15px;
+        margin: 30px 0 0 0;
+        border-top-right-radius: 4px;
+        @include md {
+          border-radius: 0;
+        }
+      }
+
+      &--bottom {
+        font-size: 12px;
+        font-family: $fontSecondary;
+        color: $colorPrimary;
+        font-weight: 100;
+        margin: 15px 0 0 0;
+
+        span {
+          display: inline-block;
+          margin: 2px 12px;
+        }
+      }
+
+      @include md {
+        float: none;
+        width: 85%;
+        margin: 0 auto;
+      }
+    }
+
+    &--more {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 30px;
+      @include sm {
+        grid-template-columns: 1fr;
+      }
+
+      .showcase-wr {
+        margin-bottom: 30px;
+      }
+
+      .txt-title--sm {
+        text-align: left;
+      }
+
+      .txt-desc--sm {
+        text-align: left;
+      }
+
+      .showcase-wr__img {
+        height: auto;
+        width: 100%;
+        float: none;
+        border-radius: 0;
+        margin-top: 15px;
+
+        img {
+          height: auto;
+          width: 100%;
+        }
+
+        @include md {
+          float: none;
+          width: 100%;
+          margin: 0;
+        }
+      }
+
+      .showcase-wr__txt {
+        float: none;
+        width: 100%;
+        margin: 0;
+        text-align: right;
+
+        .showcase-wr__txt--top {
+          text-align: left;
+          font-size: 13px;
+          margin: 0;
+          border-radius: 0;
+          padding: 18px 0 0 2px;
+          background-color: transparent;
+        }
+
+        .showcase-wr__txt--bottom {
+          font-size: 11px;
+          span {
+            margin: 2px 7px;
+          }
+        }
+
+        @include md {
+          //float: none;
+          //width: 85%;
+          //margin: 0 auto;
+        }
+      }
+    }
+  }
+
+}
