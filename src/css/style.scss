@@ -53,10 +53,26 @@ body {
   footer {
     display: block;
     color: $colorSecondary;
+    font-weight: 600;
     text-align: center;
     padding: 50px 0;
     font-size: 12px;
     opacity: 0.75;
+    .link-icon {
+      padding: 12px;
+      display: inline-block;
+      svg {
+        width: 20px;
+        height: 20px;
+        fill: $colorSecondary;
+      }
+      &:hover {
+        transition: all 0.25s cubic-bezier(0.65, 0.045, 0.35, 1) 0.1s;
+        svg {
+          fill: $colorAccent;
+        }
+      }
+    }
   }
 }
 
@@ -142,13 +158,18 @@ body {
 
 .show-more {
   font-size: 14px;
-  border: none;
   outline: none;
   color: $colorAccent;
-  font-weight: 400;
+  font-weight: 100;
   padding: 15px;
   background: transparent;
   cursor: pointer;
+  border: 0.5px solid #004203;
+  border-radius: 4px;
+  transition: background-color 0.5s ease;
+  &:hover {
+    background-color: rgba(38, 211, 83, 0.06);
+  }
 }
 
 *::-webkit-scrollbar {
