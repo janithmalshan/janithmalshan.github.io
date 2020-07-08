@@ -135,6 +135,14 @@
 .section-work .showcase-wr .txt-title--sm {
   text-align: right;
 }
+.section-work .showcase-wr .txt-title--sm a {
+  text-decoration: none;
+  color: inherit;
+}
+.section-work .showcase-wr .txt-title--sm a:hover {
+  text-decoration: none;
+  color: #26d353;
+}
 .section-work .showcase-wr .txt-desc--sm {
   text-align: right;
   color: #26d353;
@@ -143,7 +151,7 @@
   float: left;
   height: 260px;
   background-color: rgba(53, 53, 53, 0.15);
-  border-radius: 4px 4px 0px 4px;
+  border-radius: 16px 16px 4px 16px;
   width: 58%;
   overflow: hidden;
   display: block;
@@ -181,6 +189,16 @@
   padding: 18px 18px 20px 15px;
   margin: 30px 0 0 0;
   border-top-right-radius: 4px;
+}
+.section-work .showcase-wr__txt--top a {
+  color: #5f72ff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  margin-left: 5px;
+}
+.section-work .showcase-wr__txt--top a:hover {
+  color: #7787ff;
 }
 @media (max-width: 768px) {
   .section-work .showcase-wr__txt--top {
