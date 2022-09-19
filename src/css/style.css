@@ -10,7 +10,7 @@
 .section-me p {
   margin: 0;
   padding: 0 0 0 5px;
-  font-size: 14px;
+  font-size: 20px;
   display: block;
   color: #26d353;
   font-weight: 400;
@@ -19,7 +19,7 @@
 .section-me p:last-of-type {
   color: #687e8e;
   padding: 12px 0 0 2px;
-  max-width: 550px;
+  max-width: 755px;
 }
 .section-me h3 {
   margin: 0;
@@ -134,14 +134,14 @@
 }
 .section-work .showcase-wr .txt-title--sm {
   text-align: right;
+  color: #FFFFFF;
 }
 .section-work .showcase-wr .txt-title--sm a {
+  color: #FFFFFF;
   text-decoration: none;
-  color: inherit;
 }
 .section-work .showcase-wr .txt-title--sm a:hover {
-  text-decoration: none;
-  color: #26d353;
+  text-decoration: underline;
 }
 .section-work .showcase-wr .txt-desc--sm {
   text-align: right;
@@ -151,7 +151,7 @@
   float: left;
   height: 260px;
   background-color: rgba(53, 53, 53, 0.15);
-  border-radius: 16px 16px 4px 16px;
+  border-radius: 4px 4px 0px 4px;
   width: 58%;
   overflow: hidden;
   display: block;
@@ -190,20 +190,13 @@
   margin: 30px 0 0 0;
   border-top-right-radius: 4px;
 }
-.section-work .showcase-wr__txt--top a {
-  color: #5f72ff;
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: 700;
-  margin-left: 5px;
-}
-.section-work .showcase-wr__txt--top a:hover {
-  color: #7787ff;
-}
 @media (max-width: 768px) {
   .section-work .showcase-wr__txt--top {
     border-radius: 0;
   }
+}
+.section-work .showcase-wr__txt--top a {
+  color: inherit;
 }
 .section-work .showcase-wr__txt--bottom {
   font-size: 12px;
@@ -357,7 +350,7 @@ body {
   display: block;
   height: 1px;
   width: 50%;
-  background-color: #2d3952;
+  background-color: rgb(45, 57, 82);
   position: relative;
   top: 4px;
   margin-left: 20px;

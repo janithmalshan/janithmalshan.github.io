@@ -18,6 +18,14 @@
 
     .txt-title--sm {
       text-align: right;
+      color: #FFFFFF;
+      a {
+        color: #FFFFFF;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
 
     .txt-desc--sm {
@@ -71,6 +79,10 @@
         border-top-right-radius: 4px;
         @include md {
           border-radius: 0;
+        }
+
+        a {
+          color: inherit;
         }
       }
 
